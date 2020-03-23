@@ -6,13 +6,22 @@
 - clean: ["~"]
 
 - link:
-  ~/.profile: shell/profile
-  ~/.bashrc: shell/bashrc
-  ~/.backup/: backup/*
-  ~/.tmux.conf: shell/tmux.conf
-  ~/.p10k.zsh: shell/p10k.zsh
-  ~/.zshrc: shell/zshrc
-  ~/.gitconfig: git/gitconfig
+    ~/.profile:
+      #   force: true
+      path: shell/profile
+    ~/.bashrc:
+      #   force: true
+      path: shell/bashrc
+    ~/.backup/:
+      glob: true
+      path: backup/*
+      relink: true
+    ~/.tmux.conf: shell/tmux.conf
+    ~/.p10k.zsh: shell/p10k.zsh
+    ~/.zshrc:
+      #   force: true
+      path: shell/zshrc
+    ~/.gitconfig: git/gitconfig
 
 - shell:
     - git submodule sync --recursive

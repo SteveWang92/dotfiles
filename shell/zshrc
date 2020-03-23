@@ -86,7 +86,7 @@ plugins=(
         alias-tips
         # colorize
         # colored-man-pages
-        dotfiles
+        # dotfiles
 )
 
 source $ZSH/oh-my-zsh.sh
