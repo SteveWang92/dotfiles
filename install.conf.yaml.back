@@ -1,0 +1,28 @@
+- defaults:
+    link:
+      create: true
+      relink: true
+
+- clean: ["~"]
+
+- link:
+    ~/.profile: profile
+    ~/.bashrc: bashrc
+    ~/.backup/: backup/*
+    ~/.dotfiles: ''
+    ~/.gitconfig: gitconfig
+    ~/.gitignore: gitignore
+    ~/.tmux.conf: tmux.conf
+    ~/.zshrc: zshrc
+    ~/.tmux/plugins/:
+        path: tmux/plugins
+        create: true
+  ~/.tmux/plugins/:
+    path: tmux/plugins
+    create: true
+ ~/.oh-my-zsh/custom/:
+    path: oh-my-zsh/custom
+    create: true
+- shell:
+    - git submodule sync --recursive
+    - [git submodule update --init --recursive, Installing submodules]

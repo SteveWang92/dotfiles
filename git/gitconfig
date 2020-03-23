@@ -1,0 +1,21 @@
+[color]
+	ui = auto
+	branch = auto
+	status = auto
+	diff = auto
+	interactive = auto
+
+[credential]
+	helper = store
+
+[push]
+	default = upstream
+	
+[color "status"]
+  changed = yellow
+  added = green
+  untracked = red
+
+# Allow local customizations in the .gitconfig_local file
+[include]
+	path = ~/.gitconfig_local
