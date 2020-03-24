@@ -87,6 +87,8 @@ plugins=(
         # colorize
         # colored-man-pages
         # dotfiles
+        docker 
+        docker-compose
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -145,10 +147,10 @@ alias git='LANG=en_US git'
 
 alias android="~/android-studio/bin/studio.sh"
 alias cpdist="rm -rf ~/workspace/MobileTest/dist && cp -r ~/projects/fusion-web-portal/web_player/dist ~/workspace/MobileTest"
-alias emcli="em-cli"
+# alias emcli="em-cli"
 alias tmuxa="tmux attach"
 alias tmuxd="tmux detach"
-alias aws="aws2"
+# alias aws="aws2"
 alias build="./installandbuild.sh"
 alias buildcn="./installandbuild.sh -cnd"
 alias gcoc="gco template/collection"
@@ -168,6 +170,8 @@ gitPreAutoStatusCommands=(
     'init'
     'fetch'
 )
+
+export PATH=~/.local/bin:$PATH
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
