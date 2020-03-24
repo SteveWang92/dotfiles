@@ -5,12 +5,21 @@
 
 - clean: ["~"]
 
+# TODO need to add plugins
+#   zsh-autosuggestions
+#   zsh-syntax-highlighting
+#   git-auto-status
+#   alias-tips
+#   powerlevel10k
+#   tpm
+
 - link:
+    ~/.dotfiles: ''
     ~/.profile:
-      #   force: true
+      force: true
       path: shell/profile
     ~/.bashrc:
-      #   force: true
+      force: true
       path: shell/bashrc
     ~/.backup/:
       glob: true
@@ -19,7 +28,7 @@
     ~/.tmux.conf: shell/tmux.conf
     ~/.p10k.zsh: shell/p10k.zsh
     ~/.zshrc:
-      #   force: true
+      force: true
       path: shell/zshrc
     ~/.gitconfig: git/gitconfig
 
