@@ -1,4 +1,4 @@
-Dotfiles Template
+# Dotfiles Template
 
 This is a template repository for bootstrapping your dotfiles with [Dotbot][dotbot].
 
@@ -54,7 +54,4 @@ Dotbot (or this repository) to help other people discover Dotbot.
 [bluekeys_dotfiles]: https://github.com/bluekeys/.dotfiles
 [wazery_dotfiles]: https://github.com/wazery/dotfiles
 [thirtythreeforty_dotfiles]: https://github.com/thirtythreeforty/dotfiles
-
-# [dotbot-users]: https://github.com/anishathalye/dotbot/wiki/Users
-
-# dotfiles
+[dotbot-users]: https://github.com/anishathalye/dotbot/wiki/Users
