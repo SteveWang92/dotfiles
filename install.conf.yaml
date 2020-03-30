@@ -25,12 +25,12 @@
       glob: true
       path: backup/*
       relink: true
-    ~/.oh-my-zsh/custom:
-      glob: true
-      path: oh-my-zsh/custom
-    ~/.tmux/plugins:
-      glob: true
-      path: tmux/plugins
+    # ~/.oh-my-zsh/custom:
+    #   glob: true
+    #   path: oh-my-zsh/custom
+    # ~/.tmux/plugins:
+    #   glob: true
+    #   path: tmux/plugins
     ~/.tmux.conf: shell/tmux.conf
     ~/.p10k.zsh: shell/p10k.zsh
     ~/.zshrc:
