@@ -89,6 +89,7 @@ plugins=(
         # dotfiles
         docker 
         docker-compose
+        docker-compose-status
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -154,6 +155,7 @@ alias tmuxd="tmux detach"
 alias build="./installandbuild.sh"
 alias buildcn="./installandbuild.sh -cnd"
 alias gcoc="gco template/collection"
+alias ts="ts-node"
 
 export TERM=xterm-256color
 
