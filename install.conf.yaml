@@ -34,6 +34,9 @@
     ? ~/.oh-my-zsh/custom/plugins/docker-compose-status/docker-compose-status.plugin.zsh
     : glob: true
       path: shell/oh-my-zsh/plugins/docker-compose-status.plugin.zsh
+    ~/.oh-my-zsh/custom/plugins/git-auto-status/git-auto-status.plugin.zsh:
+      glob: true
+      path: shell/oh-my-zsh/plugins/git-auto-status.plugin.zsh
     ~/.tmux.conf: shell/tmux.conf
     ~/.p10k.zsh: shell/p10k.zsh
     ~/.zshrc:
@@ -44,3 +47,4 @@
 - shell:
     - git submodule sync --recursive
     - [git submodule update --init --recursive, Installing submodules]
+    # - sh ./install_scripts.sh

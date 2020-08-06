@@ -156,6 +156,7 @@ alias build="./installandbuild.sh"
 alias buildcn="./installandbuild.sh -cnd"
 alias gcoc="gco template/collection"
 alias ts="ts-node"
+# alias python="python3"
 
 export TERM=xterm-256color
 
