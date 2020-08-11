@@ -138,6 +138,7 @@ alias nrtype="npm run typescript-check"
 alias inb="npm install && npm run build"
 alias ins="npm install && npm start"
 alias inw="npm install && npm run watch"
+alias nrtw="npm run test-watch"
 
 alias szsh="source ~/.zshrc"
 alias zshrc="st ~/.zshrc"
