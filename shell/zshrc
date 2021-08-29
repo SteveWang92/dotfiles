@@ -159,10 +159,13 @@ alias tmuxd="tmux detach"
 # alias aws="aws2"
 alias build="./installandbuild.sh"
 alias buildcn="./installandbuild.sh -cnd"
-alias gcoc="gco template/collection"
+
 alias ts="ts-node"
 # alias python="python3"
 alias folder="nautilus"
+
+alias buildNew="npm start -- -p c,n,m,ng -w f -i i -l s"
+alias buildNewEditor="npm start -- -p c,n,te,m,ng -w f -i i -l s"
 
 export TERM=xterm-256color
 
