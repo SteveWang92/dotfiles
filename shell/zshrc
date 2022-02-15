@@ -126,6 +126,9 @@ fi
 
 alias gcm='git commit -m'
 alias gf='git fetch -p'
+alias gpu='gp -u origin'
+alias gcob='gco -b'
+
 alias di="docker images"
 alias dps="docker ps"
 alias dcps="docker-compose ps"
