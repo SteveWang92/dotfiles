@@ -1,10 +1,11 @@
 # install zsh
+
 # cat /etc/shells
-apt install zsh -y
-chsh -s /bin/zsh
+# apt install zsh -y
+# chsh -s /bin/zsh
+
 # reboot
 sudo install python git -y
-
 
 # install oh my zsh
 wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | sh

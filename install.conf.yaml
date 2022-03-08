@@ -5,14 +5,6 @@
 
 - clean: ["~"]
 
-# TODO need to add plugins
-#   zsh-autosuggestions
-#   zsh-syntax-highlighting
-#   git-auto-status
-#   alias-tips
-#   powerlevel10k
-#   tpm
-
 - link:
     ~/.dotfiles: ""
     ~/.profile:
@@ -25,14 +17,8 @@
       glob: true
       path: backup/*
       relink: true
-    # ~/.oh-my-zsh/custom:
-    #   glob: true
-    #   path: oh-my-zsh/custom
-    # ~/.tmux/plugins:
-    #   glob: true
-    #   path: tmux/plugins
-    ? ~/.oh-my-zsh/custom/plugins/docker-compose-status/docker-compose-status.plugin.zsh
-    : glob: true
+    ~/.oh-my-zsh/custom/plugins/docker-compose-status/docker-compose-status.plugin.zsh:
+      glob: true
       path: shell/oh-my-zsh/plugins/docker-compose-status.plugin.zsh
     ~/.oh-my-zsh/custom/plugins/git-auto-status/git-auto-status.plugin.zsh:
       glob: true
@@ -48,3 +34,5 @@
     - git submodule sync --recursive
     - [git submodule update --init --recursive, Installing submodules]
     # - sh ./install_scripts.sh
+    # - sh ./install_docker.sh
+    # run these two before install
