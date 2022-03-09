@@ -10,7 +10,7 @@ nvm install 14
 npm install -g typescript
 npm install -g ts-node
 
-sudo apt install -y htop python
+sudo apt install -y htop python curl
 
 # install aws, ngrok, workbench, discord, spotify, vscode, albert
 # setup git, bitbucket
@@ -32,16 +32,20 @@ git clone https://github.com/djui/alias-tips.git ${ZSH_CUSTOM1:-$ZSH/custom}/plu
 sudo apt install tmux -y
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
+# albert
+curl "https://build.opensuse.org/projects/home:manuelschneid3r/public_key" | sudo apt-key add -
 echo 'deb http://download.opensuse.org/repositories/home:/manuelschneid3r/xUbuntu_18.04/ /' | sudo tee /etc/apt/sources.list.d/home:manuelschneid3r.list
 curl -fsSL https://download.opensuse.org/repositories/home:manuelschneid3r/xUbuntu_18.04/Release.key | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/home_manuelschneid3r.gpg >/dev/null
 sudo apt update
 sudo apt install albert -y
 
-sudo apt install curl -y
-
+# spotify
 curl -sS https://download.spotify.com/debian/pubkey_0D811D58.gpg | sudo apt-key add -
 echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
 sudo apt-get update && sudo apt-get install spotify-client -y
+
+# vscode
+sudo snap install code --classic
 
 # https://dev.mysql.com/get/Downloads/MySQLGUITools/mysql-workbench-community_8.0.23-1ubuntu18.04_amd64.deb
 
