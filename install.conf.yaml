@@ -33,6 +33,6 @@
 - shell:
     - git submodule sync --recursive
     - [git submodule update --init --recursive, Installing submodules]
-    # - sh ./install_scripts.sh
+    # - sh ./install_scripts.sh # run these two before install
     # - sh ./install_docker.sh
-    # run these two before install
+    - timedatectl set-local-rtc 1 --adjust-system-clock # setup time with duel boot
