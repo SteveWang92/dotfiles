@@ -36,3 +36,4 @@
     # - sh ./install_scripts.sh # run these two before install
     # - sh ./install_docker.sh
     - timedatectl set-local-rtc 1 --adjust-system-clock # setup time with duel boot
+    - echo fs.inotify.max_user_watches=393210 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p # fix js watcher limit
