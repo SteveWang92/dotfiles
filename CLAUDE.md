@@ -31,9 +31,19 @@ Notable contents if you do need to look:
   `archive/backup/` (package-manager snapshot files), `archive/backup_packages.sh`, `archive/install_scripts.sh`,
   `archive/install_docker.sh` — one-off Ubuntu bootstrap recipes (zsh/oh-my-zsh, Docker, apt/snap packages).
 
-## Active layout
+## Active layout (Windows)
 
-- **`dotbot/`** — vendored upstream submodule; don't hand-edit it. Available for the new Windows config setup.
+- **`install.ps1`** — the installer. Syncs/inits submodules, then runs `dotbot/bin/dotbot` against
+  `install.conf.yaml`. It resolves the real Python interpreter first because the Python 3.14+ Windows shim
+  can't run dotbot's sh/python polyglot entry point. Symlink creation requires Developer Mode (or admin).
+- **`install.conf.yaml`** — the Dotbot config: cleans dead links under `~/.claude` and symlinks the `claude/`
+  contents into place.
+- **`claude/`** — Claude Code global config managed by this repo (the live files under `~/.claude` are
+  symlinks into here):
+  - `claude/CLAUDE.md` → `~/.claude/CLAUDE.md` (global working rules)
+  - `claude/settings.json` → `~/.claude/settings.json`
+  - `claude/skills/` → `~/.claude/skills` (whole directory is linked, so new skills created on a machine
+    land in the repo automatically — commit them)
+  - Never add `~/.claude/.credentials.json` or anything else containing tokens/secrets here.
+- **`dotbot/`** — vendored upstream submodule (v1.24.1); don't hand-edit it.
 - **`.gitmodules`** — registers `dotbot`. The other commented-out submodule entries are historical and inactive.
-- Windows config/dotfiles content and its own install mechanism don't exist yet — this section should be filled
-  in as that setup is built out.
