@@ -33,17 +33,16 @@ Notable contents if you do need to look:
 
 ## Active layout (Windows)
 
-- **`install.ps1`** — the installer. Syncs/inits submodules, then runs `dotbot/bin/dotbot` against
-  `install.conf.yaml`. It resolves the real Python interpreter first because the Python 3.14+ Windows shim
-  can't run dotbot's sh/python polyglot entry point. Symlink creation requires Developer Mode (or admin).
-- **`install.conf.yaml`** — the Dotbot config: cleans dead links under `~/.claude` and symlinks the `claude/`
-  contents into place.
-- **`claude/`** — Claude Code global config managed by this repo (the live files under `~/.claude` are
-  symlinks into here):
-  - `claude/CLAUDE.md` → `~/.claude/CLAUDE.md` (global working rules)
-  - `claude/settings.json` → `~/.claude/settings.json`
-  - `claude/skills/` → `~/.claude/skills` (whole directory is linked, so new skills created on a machine
-    land in the repo automatically — commit them)
+- **`claude/`** — master copies of the Claude Code global config, applied by **manually copying** to
+  `~/.claude` on each machine (no symlinks/installer — the owner's other device has no admin rights and
+  can't enable Developer Mode, which Windows symlink creation needs):
+  - `claude/CLAUDE.md` → copy to `~/.claude/CLAUDE.md` (global working rules)
+  - `claude/settings.json` → copy to `~/.claude/settings.json`
+  - `claude/skills/` → copy to `~/.claude/skills/`
+  - Because these are copies, edits made live under `~/.claude` (e.g. a new skill) must be copied back
+    into `claude/` and committed to be shared.
   - Never add `~/.claude/.credentials.json` or anything else containing tokens/secrets here.
-- **`dotbot/`** — vendored upstream submodule (v1.24.1); don't hand-edit it.
+- **`dotbot/`** — vendored upstream submodule (v1.24.1); don't hand-edit it. Not currently wired to
+  anything (a symlink-based `install.conf.yaml`/`install.ps1` setup was tried and dropped — see above);
+  kept in case a copy-based or elevated setup wants it later.
 - **`.gitmodules`** — registers `dotbot`. The other commented-out submodule entries are historical and inactive.
