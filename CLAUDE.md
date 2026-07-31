@@ -10,6 +10,8 @@ configs/scripts have been moved into `archive/` (untouched, not deleted — see 
 repurposed for **Windows** config/dotfiles setup instead. `dotbot/` was kept at the root (not archived) since it
 may be reused to manage the Windows setup too.
 
+The repo currently holds no active config of its own — only `archive/` and the vendored `dotbot/` submodule.
+
 There is no build, lint, or test tooling — this is a config repo, not a program. "Verifying" a change means
 reading the shell/yaml/config for correctness, and (if actually applying it) checking the resulting symlinks or
 script output.
@@ -33,15 +35,10 @@ Notable contents if you do need to look:
 
 ## Active layout (Windows)
 
-- **`claude/`** — master copies of the Claude Code global config, applied by **manually copying** to
-  `~/.claude` on each machine (no symlinks/installer — the owner's other device has no admin rights and
-  can't enable Developer Mode, which Windows symlink creation needs):
-  - `claude/CLAUDE.md` → copy to `~/.claude/CLAUDE.md` (global working rules)
-  - `claude/settings.json` → copy to `~/.claude/settings.json`
-  - `claude/skills/` → copy to `~/.claude/skills/`
-  - Because these are copies, edits made live under `~/.claude` (e.g. a new skill) must be copied back
-    into `claude/` and committed to be shared.
-  - Never add `~/.claude/.credentials.json` or anything else containing tokens/secrets here.
+- **Claude Code config is no longer kept here.** `claude/` (global `CLAUDE.md`, `settings.json`, skills)
+  was removed on 2026-08-01 — the live files under `~/.claude` are the only copy, and this repo is not
+  a backup for them. Don't re-add it without being asked. Never add `~/.claude/.credentials.json` or
+  anything else containing tokens/secrets. The removed files remain in git history if they're needed.
 - **`dotbot/`** — vendored upstream submodule (v1.24.1); don't hand-edit it. Not currently wired to
   anything (a symlink-based `install.conf.yaml`/`install.ps1` setup was tried and dropped — see above);
   kept in case a copy-based or elevated setup wants it later.
